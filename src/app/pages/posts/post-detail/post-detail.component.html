@@ -1,0 +1,12 @@
+<section class="posts">
+  <div class="posts-wrapper" *ngIf="post">
+    <div class="posts-header">
+      <app-ui-title [title]="post.title" [breadcrumbItems]="breadCrumbItems"></app-ui-title>
+    </div>
+    <div class="post-body">
+      <div class="custom-text">
+        <p class="m-0">{{post.body}}</p>
+      </div>
+    </div>
+  </div>
+</section>

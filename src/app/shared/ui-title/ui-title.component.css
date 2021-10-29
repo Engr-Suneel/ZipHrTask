@@ -1,0 +1,12 @@
+.ui-title {
+  font-size: 14px;
+}
+.breadcrumb-item a{
+  color: #2980b9;
+  text-decoration: none;
+}
+.app-title h1 {
+  font-size: 28px;
+  margin: 0px;
+  line-height: 30px;  
+}

@@ -1,0 +1,45 @@
+.users {
+  height: 100%;
+  font-size: 14px;
+}
+.users-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+.users-header {
+  background: #2980b9;
+  color: #ffffff;
+  height: 180px;
+  display: flex;
+  align-items: center;  
+}
+.inner-content {
+  margin: auto 100px;  
+}
+.custom-h1 {
+  font-size: 36px;
+  margin: 0px;
+}
+.users-content {
+  height: calc(100% - 180px);
+  padding: 15px 0px;
+}
+.custom-card-body {
+  height: calc(100% - 34px);
+  overflow-y: scroll;
+}
+.posts-list h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--primary-color);
+  font-size: 16px;
+  margin: 0px;
+  margin-bottom: 5px;  
+}
+.posts-list p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;  
+}

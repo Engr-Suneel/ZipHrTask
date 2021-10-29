@@ -1,0 +1,15 @@
+<section class="ui-title">
+  <div class="app-breadcrums">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <ng-container *ngFor="let item of breadcrumbItems">
+          <li class="breadcrumb-item" *ngIf="!item.isActive"><a href="javascript: void(0);">{{ item.label }}</a></li>
+          <li class="breadcrumb-item" *ngIf="item.isActive">{{ item.label }}</li>
+        </ng-container>
+      </ol>
+    </nav>
+  </div>
+  <div class="app-title">
+    <h1>{{ title }}</h1>
+  </div>
+</section>

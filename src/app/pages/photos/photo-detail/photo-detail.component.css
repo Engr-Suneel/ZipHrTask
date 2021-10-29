@@ -1,0 +1,20 @@
+.photos {
+  font-size: 14px;
+  padding: 15px 0px;
+}
+.photos-wrapper {
+  margin: auto 100px;
+}
+.heading-color {
+  color: var(--primary-color) !important;
+}
+.pointer {
+  cursor: pointer;
+}
+.custom-a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-top: 8px;
+  display: block;
+  font-size: 12px;  
+}

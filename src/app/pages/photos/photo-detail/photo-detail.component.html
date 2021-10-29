@@ -1,0 +1,14 @@
+<section class="photos">
+  <div class="photos-wrapper">
+    <div class="photos-header" *ngIf="photo">
+      <app-ui-title [title]="photo.title" [breadcrumbItems]="breadCrumbItems"></app-ui-title>
+      <a [routerLink]="['/albums', photo?.albumId]" class="custom-a">View Album</a>
+    </div>
+    <div class="photos-body">
+
+      <div class="text-center mt-3">
+        <img [src]="photo?.url">
+      </div>
+    </div>
+  </div>
+</section>

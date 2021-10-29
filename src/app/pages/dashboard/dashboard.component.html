@@ -1,0 +1,72 @@
+<section class="dashboard">
+  <div class="dashboard-wrapper">
+    <div class="dashboard-header">
+      <div class="inner-content w-100">
+        <p class="m-0">Welcome to</p>
+        <h1 class="custom-h1">My App</h1>
+      </div>
+    </div>
+    <div class="dashbaord-content">
+      <div class="inner-content h-100">
+        <div class="row h-100">
+          <div class="col-sm-4 h-100">
+            <div class="app-card">
+              <div class="app-card-header">Statistics</div>
+              <div class="app-card-body">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="statistics-data">
+                      <p>123 <span>Posts</span></p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="statistics-data">
+                      <p>12 <span>Albums</span></p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="statistics-data">
+                      <p>{{'1234' | number}} <span>Photos</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 h-100">
+            <div class="app-card" *ngIf="dashboardPosts$ | async as postList">
+              <div class="app-card-header">Latest Posts</div>
+              <div class="app-card-body custom-card-body">
+                <div class="posts-list mb-3" *ngFor="let post of postList">
+                  <h4>{{post.title}}</h4>
+                  <p>{{post.body}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 h-100">
+            <div class="app-card" *ngIf="dashboardPhoto$ | async as photoList">
+              <div class="app-card-header">Recent Photos</div>
+              <div class="app-card-body custom-card-body">
+                <div class="row">
+                  <div class="col-4 mb-3" *ngFor="let item of photoList">
+                    <div class="app-card pointer">
+                      <div class="app-card-body p-0">
+                        <div class="thumbnial">
+                          <img [src]="item.thumbnailUrl" class="w-100">
+                        </div>
+                      </div>
+                      <div class="app-card-header heading-color">
+                        {{item.title}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

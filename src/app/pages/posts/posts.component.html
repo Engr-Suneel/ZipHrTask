@@ -1,0 +1,38 @@
+<section class="posts">
+  <div class="posts-wrapper">
+    <div class="posts-header">
+      <app-ui-title [title]="title" [breadcrumbItems]="breadCrumbItems"></app-ui-title>
+    </div>
+    <div class="post-body">
+      <div class="row mt-3">
+        <div class="col-3">
+          <input class="form-control" placeholder="Search" type="search" (input)="onSearch($event)" />
+        </div>
+      </div>
+      <table class="table table-bordered table-hover pointer mt-3">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Title</th>
+            <th>Content</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of displayPostList" (click)="onRowClick(item)">
+            <td>{{item.id}}</td>
+            <td class="primary-color" (click)="userDetails(item.userId);$event.stopPropagation()">User {{item.userId}}
+            </td>
+            <td class="primary-color">{{item.title}}</td>
+            <td>{{item.body}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="mt-3">
+        <az-paginations [totalRecords]="totalRecords" [size]="pageSize" [currentPage]="pageNo"
+          (pageClicked)="onPageChange($event)" (recordChange)="onRecordChange($event)"></az-paginations>
+      </div>
+    </div>
+  </div>
+</section>

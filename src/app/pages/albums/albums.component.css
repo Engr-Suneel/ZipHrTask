@@ -1,0 +1,18 @@
+.albums {
+  font-size: 14px;
+  padding: 15px 0px;
+}
+.albums-wrapper {
+  margin: auto 100px;
+}
+.heading-color {
+  color: var(--primary-color) !important;
+}
+.custom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;  
+}
+.pointer {
+  cursor: pointer;
+}

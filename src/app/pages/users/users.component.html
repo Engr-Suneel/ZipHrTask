@@ -1,0 +1,41 @@
+<section class="users">
+  <div class="users-wrapper">
+    <div class="users-header">
+      <div class="inner-content w-100" *ngIf="user">
+        <h1 class="custom-h1">{{user.name}}</h1>
+        <p class="m-0">@{{user.username + ' - ' + user.email + ' - ' + user.website + ' - ' + user.company.name + ' - '
+          + user.address.city}}</p>
+      </div>
+    </div>
+    <div class="users-content">
+      <div class="inner-content h-100">
+        <div class="row h-100">
+
+          <div class="col-sm-6 h-100">
+            <div class="app-card" *ngIf="userAlbums$ | async as albumsList">
+              <div class="app-card-header">Albums</div>
+              <div class="app-card-body custom-card-body">
+                <div class="posts-list mb-3" *ngFor="let album of albumsList">
+                  <h4>{{album.title}}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 h-100">
+            <div class="app-card" *ngIf="userPosts$ | async as postList">
+              <div class="app-card-header">Posts</div>
+              <div class="app-card-body custom-card-body">
+                <div class="posts-list mb-3" *ngFor="let post of postList">
+                  <h4>{{post.title}}</h4>
+                  <p>{{post.body}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
